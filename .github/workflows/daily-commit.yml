@@ -2,7 +2,7 @@ name: Daily Commit Automation
 
 on:
   schedule:
-    - cron: "30 2 * * *"
+    - cron: "30 2 * * *"  # daily at 02:30 UTC
   workflow_dispatch:
 
 jobs:
@@ -15,7 +15,7 @@ jobs:
       - name: Checkout repository
         uses: actions/checkout@v4
 
-      - name: Add a commit (email: 24f2001361@ds.study.iitm.ac.in)
+      - name: Add a commit - email 24f2001361@ds.study.iitm.ac.in
         run: |
           git config --local user.name "GitHub Action Bot"
           git config --local user.email "24f2001361@ds.study.iitm.ac.in"
